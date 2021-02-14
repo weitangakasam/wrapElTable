@@ -21,7 +21,7 @@ type等属性,其中type包括了3种自定义模式,分别是'function','slot'�
 row是这一行的数据,来源于el-table-column中的scoped-slot="scoped"
 例如显示vlanId的时候就是返回正则匹配的数字.
 
-3.然后当如果是slot的话,那么处理方式就是插槽,我们可以通过在<my-table></my-table>中传入<tempalte v-slot:propName="{row,prop}">
+3.然后当如果是slot的话,那么处理方式就是具名插槽,我们可以通过在<my-table></my-table>中传入<tempalte v-slot:propName="{row,prop}">
 来获取值和prop,但是这个propName必须和type是slot里面的prop要相对应才可以.然后在这里面我们可以插入修改删除按钮并对应的进行处理
 
 4.最终显示的数据是computed的出来,一旦我们在搜索框中输入了内容,那么就需要设置字段,然后重新触发computed
