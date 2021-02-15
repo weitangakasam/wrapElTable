@@ -45,7 +45,7 @@ export default {
       height: 70,
       start: 0,
       end: 4,
-      scroll: "0px",
+      scroll: 0,
     };
   },
   computed: {
