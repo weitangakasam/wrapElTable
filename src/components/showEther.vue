@@ -31,10 +31,13 @@ export default {
       bind(el, ref) {
         let ob = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
-            if (entry.target === el) {
+            if (entry.target === el && entry.intersectionRatio >= 0.5) {
+              //只有当进入的时候才调用，离开的时候不调用
               ref.value();
             }
           });
+        },{
+          threshold: [0.1], // 展现面积为10%触发
         });
         ob.observe(el);
       },
